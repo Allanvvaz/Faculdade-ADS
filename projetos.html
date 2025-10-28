@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>ONG Exemplo - Projetos</title>
+	<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Pular para o conteúdo</a>
+
+<header class="site-header" role="banner">
+	<div class="container">
+		<h1>ONG Exemplo</h1>
+		<nav aria-label="Principal">
+			<ul class="main-nav">
+				<li><a href="index.html">Início</a></li>
+				<li><a href="projetos.html" aria-current="page">Projetos</a></li>
+				<li><a href="cadastro.html">Cadastro</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+<main id="main" role="main" class="container">
+	<h2>Projetos em destaque</h2>
+
+	<div class="filters" data-filter-wrap>
+		<button type="button" class="chip" data-filter="all" aria-pressed="true">Todos</button>
+		<button type="button" class="chip" data-filter="educacao">Educação</button>
+		<button type="button" class="chip" data-filter="meio-ambiente">Meio ambiente</button>
+	</div>
+
+	<section class="project-list" aria-labelledby="projects-title">
+		<h3 id="projects-title">Voluntariado e doações</h3>
+
+		<article class="project" aria-labelledby="p1" data-category="educacao">
+			<h4 id="p1">Oficinas de Alfabetização</h4>
+			<img src="assets/img/oficina.jpg" alt="Crianças em oficina de leitura" loading="lazy">
+			<p>Descrição resumida. Indicadores:</p>
+			<ul class="badges">
+				<li class="badge">120 beneficiários</li>
+				<li class="badge">8 voluntários ativos</li>
+				<li class="badge">Educação</li>
+			</ul>
+			<a href="#" class="btn">Ver detalhes</a>
+		</article>
+
+		<article class="project" aria-labelledby="p2" data-category="meio-ambiente">
+			<h4 id="p2">Horta Comunitária</h4>
+			<img src="assets/img/horta.jpg" alt="Voluntários cuidando de horta" loading="lazy">
+			<p>Descrição resumida. Indicadores:</p>
+			<ul class="badges">
+				<li class="badge">200 kg/mês</li>
+				<li class="badge">Meio ambiente</li>
+				<li class="badge">Agricultura urbana</li>
+			</ul>
+			<a href="#" class="btn">Ver detalhes</a>
+		</article>
+	</section>
+
+	<section class="gallery" aria-labelledby="galeria-title">
+		<h3 id="galeria-title">Galeria</h3>
+		<div class="gallery-grid">
+			<img src="assets/img/oficina.jpg" alt="Oficina de leitura">
+			<img src="assets/img/horta.jpg" alt="Horta comunitária">
+			<a class="video-thumb" href="https://youtu.be/4qUpzks7x-g?si=E1PczYbx6EGwMvJx" target="_blank" rel="noopener">Ver vídeo</a>
+		</div>
+	</section>
+
+	<section class="volunteers" aria-labelledby="vol-title">
+		<h3 id="vol-title">Oportunidades de voluntariado</h3>
+		<ul class="cards">
+			<li class="card">
+				<h4>Monitor(a) de leitura</h4>
+				<p>2h/semana — apoio nas oficinas de alfabetização.</p>
+				<button class="btn js-apply-btn" data-op="Monitor(a) de leitura">Inscreva-se</button>
+			</li>
+			<li class="card">
+				<h4>Auxiliar de horta</h4>
+				<p>Manhãs de sábado — manutenção e colheita.</p>
+				<button class="btn js-apply-btn" data-op="Auxiliar de horta">Inscreva-se</button>
+			</li>
+		</ul>
+	</section>
+
+	<div class="modal" id="applyModal" hidden>
+		<div class="modal-backdrop" data-close-modal></div>
+		<div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="applyTitle">
+			<button class="modal-close" aria-label="Fechar" data-close-modal>×</button>
+			<h4 id="applyTitle">Inscrição</h4>
+			<p>Vaga: <strong id="applyRole">-</strong></p>
+			<p>Para concluir sua inscrição, acesse a página Cadastro e selecione “Voluntário”.</p>
+			<a href="cadastro.html" class="btn">Ir para cadastro</a>
+		</div>
+	</div>
+
+	<section class="fundraising" aria-labelledby="fund-title">
+		<h3 id="fund-title">Campanhas de arrecadação</h3>
+
+		<article class="campaign card" data-goal="10000" data-raised="3500">
+			<h4>Inverno solidário</h4>
+			<p>Meta para compra de cobertores e agasalhos.</p>
+			<div class="progress" aria-label="Progresso da campanha">
+				<div class="progress-bar" style="width:0%"></div>
+			</div>
+			<p><strong><span data-progress>0%</span></strong> — Arrecadado: <span data-raised>R$ 0,00</span> / Meta: <span data-goal>R$ 0,00</span></p>
+			<form class="donate-form" aria-label="Doação online (simulação)">
+				<label for="valor1">Valor (R$)</label>
+				<input id="valor1" name="valor" type="number" step="1" min="5" value="50" required>
+				<button class="btn" type="submit">Doar agora</button>
+			</form>
+		</article>
+
+		<article class="campaign card" data-goal="5000" data-raised="2200">
+			<h4>Kits escolares</h4>
+			<p>Material para 150 crianças.</p>
+			<div class="progress" aria-label="Progresso da campanha">
+				<div class="progress-bar" style="width:0%"></div>
+			</div>
+			<p><strong><span data-progress>0%</span></strong> — Arrecadado: <span data-raised>R$ 0,00</span> / Meta: <span data-goal>R$ 0,00</span></p>
+			<form class="donate-form" aria-label="Doação online (simulação)">
+				<label for="valor2">Valor (R$)</label>
+				<input id="valor2" name="valor" type="number" step="1" min="5" value="30" required>
+				<button class="btn" type="submit">Doar agora</button>
+			</form>
+		</article>
+	</section>
+</main>
+
+<footer role="contentinfo">
+	<div class="container">
+		<p>© <span id="year"></span> ONG Exemplo</p>
+	</div>
+</footer>
+
+<script src="assets/scripts.js" defer></script>
+</body>
+</html>
