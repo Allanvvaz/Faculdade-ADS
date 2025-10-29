@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>ONG Exemplo - Cadastro</title>
+	<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Pular para o conteúdo</a>
+
+<header class="site-header" role="banner">
+	<div class="container">
+		<div class="header-inner">
+			<h1>ONG Exemplo</h1>
+
+			<button class="nav-toggle" aria-controls="main-nav" aria-expanded="false">Menu</button>
+
+			<nav aria-label="Principal">
+				<ul id="main-nav" class="main-nav" aria-expanded="false">
+					<li><a href="index.html" data-spa>Início</a></li>
+					<li><a href="projetos.html" data-spa>Projetos</a></li>
+					<li><a href="cadastro.html" data-spa aria-current="page">Cadastro</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</header>
+
+<main id="main" role="main" class="container">
+	<h2>Cadastro</h2>
+
+	<form id="cadastroForm" novalidate>
+		<fieldset>
+			<legend>Dados pessoais</legend>
+			<label for="nome">Nome completo</label>
+			<input id="nome" name="nome" type="text" required autocomplete="name" placeholder="Seu nome">
+
+			<label for="email">E-mail</label>
+			<input id="email" name="email" type="email" required autocomplete="email" placeholder="seu@email.com">
+
+			<label for="cpf">CPF</label>
+			<input id="cpf" name="cpf" type="text" inputmode="numeric" placeholder="000.000.000-00" required>
+
+			<label for="telefone">Telefone</label>
+			<input id="telefone" name="telefone" type="tel" inputmode="tel" placeholder="(00) 00000-0000" required>
+		</fieldset>
+
+		<fieldset>
+			<legend>Endereço</legend>
+			<label for="cep">CEP</label>
+			<input id="cep" name="cep" type="text" inputmode="numeric" placeholder="00000-000" required>
+
+			<label for="endereco">Endereço</label>
+			<input id="endereco" name="endereco" type="text" placeholder="Rua, número, complemento" required>
+
+			<label for="cidade">Cidade</label>
+			<input id="cidade" name="cidade" type="text" required>
+
+			<label for="estado">Estado</label>
+			<select id="estado" name="estado" required>
+				<option value="">Selecione</option>
+				<option value="PB">PB</option>
+				<option value="PE">PE</option>
+				<option value="SP">SP</option>
+			</select>
+		</fieldset>
+
+		<fieldset>
+			<legend>Perfil</legend>
+			<label for="tipo">Sou</label>
+			<select id="tipo" name="tipo">
+				<option value="voluntario">Voluntário</option>
+				<option value="doador">Doador</option>
+				<option value="visitante">Visitante</option>
+			</select>
+
+			<label for="interesses">Interesses</label>
+			<div id="interesses" role="group" aria-labelledby="interesses">
+				<label><input type="checkbox" name="interesses" value="educacao"> Educação</label>
+				<label><input type="checkbox" name="interesses" value="horta"> Horta Comunitária</label>
+				<label><input type="checkbox" name="interesses" value="saude"> Saúde</label>
+			</div>
+		</fieldset>
+
+		<button type="submit" class="btn">Enviar cadastro</button>
+	</form>
+
+	<noscript>
+		<p class="notice">Para enviar o formulário é necessário habilitar JavaScript.</p>
+	</noscript>
+
+	<section id="areaVoluntario" class="vol-area" hidden aria-labelledby="vol-area-title">
+		<h3 id="vol-area-title">Área do voluntário</h3>
+		<p>Bem-vindo(a), <strong id="volNome">Voluntário</strong>.</p>
+
+		<h4>Histórico</h4>
+		<ul class="timeline">
+			<li>2024 — Participação na campanha de inverno</li>
+			<li>2025 — Oficina de leitura nível 1</li>
+		</ul>
+
+		<div class="card certificate" id="certificado">
+			<h4>Certificado digital</h4>
+			<p>Certificamos que <strong id="certNome">[Seu nome]</strong> participou de ações voluntárias na ONG Exemplo.</p>
+			<p>Data: <span id="certData"></span></p>
+			<button type="button" class="btn" id="btnCertificado">Gerar certificado (imprimir)</button>
+		</div>
+	</section>
+</main>
+
+<footer role="contentinfo">
+	<div class="container">
+		<p>© <span id="year"></span> ONG Exemplo</p>
+	</div>
+</footer>
+
+<script src="assets/scripts.js" defer></script>
+</body>
+</html>
